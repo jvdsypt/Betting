@@ -272,6 +272,7 @@
 </section>
 <!-- our Klassement section --> 
 <!-- Twitterfeed section -->
+
 <section id="Twitterfeed" class="section testimonials no-padding">
   <div class="container-fluid">
     <div class="row no-gutter">
@@ -280,16 +281,22 @@
           <li>
             <div class="col-md-12">
               <blockquote>
-                <h1>"Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Phasellus non dolor nibh. Nullam elementum Aenean eu leo quam..." </h1>
-                <p>Rene Brown, Open Window production</p>
+                <a class="twitter-timeline"
+                  href="https://twitter.com/GaryLineker"
+                  data-tweet-limit="1"
+                  cards = hidden>
+                  </a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>Latest tweet by @GaryLineker</p>
               </blockquote>
             </div>
           </li>
           <li>
             <div class="col-md-12">
               <blockquote>
-                <h1>"Cras dictum tellus dui, vitae sollicitudin ipsum. Phasellus non dolor nibh. Nullam elementum tellus pretium feugiat shasellus non dolor nibh. Nullam elementum tellus pretium feugiat." </h1>
-                <p>Brain Rice, Lexix Private Limited.</p>
+                            <a class="twitter-timeline"  href="https://twitter.com/hashtag/WorldCup2018" data-widget-id="947215590632185858">Tweets over #WorldCup2018</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <p>Latest tweet #WorldCup2018</p>
               </blockquote>
             </div>
           </li>
