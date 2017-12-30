@@ -48,6 +48,7 @@
           <li><a href="#Klassement">Klassement</a></li>
           <li><a href="#Twitterfeed">Twitterfeed</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="index.php?logout='1'">logout</a></li>
         </ul>
       </nav>
       <a href="#" class="nav-toggle">Menu<span></span></a> </div>
@@ -58,7 +59,7 @@
       <div class="banner-text text-center">
         <h1>WK 2018 New Betting Platform</h1>
         <p>Lorem ipsum dolor sit ametcursus magna vel scelerisque Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna vel scelerisque nisl consectetur et.nisl consectetur et.</p>
-        <a href="#Uitslagen" class="btn btn-large">Ga naar uitslagen</a> </div>
+        <a href="#Uitslagen" class="btn btn-large">Ga naar uitslagen!</a> </div>
       <!-- banner text --> 
     </div>
   </div>
@@ -69,7 +70,7 @@
   <div class="container">
     <div class="col-md-8 col-md-offset-2 text-center">
       <h3>Hier komen mededelingen</h3>
-      <p>Lorem ipsum dolor sit ametcursus magna vel scelerisque Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna vel scelerisque nisl consectetur et.nisl consectetur et.</p>
+      <p>Nog maar 2 dagen om de bonussen in te dienen!</p>
     </div>
   </div>
 </section>
@@ -80,37 +81,37 @@
     <div class="row">
       <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-strategy"></span>
         <div class="services-content">
-          <h5>Strategy & Consulting</h5>
-          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec nulla non metus.</p>
+          <h5>Match 1 (foto zijn vlagen van de ploegen)</h5>
+          <p>Online wel ergens een feed te vinden</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-briefcase"></span>
         <div class="services-content">
-          <h5>corporate identity</h5>
+          <h5>Match 2 (foto zijn vlagen van de ploegen)</h5>
           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec nulla non metus.</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-tools"></span>
         <div class="services-content">
-          <h5>web design and development</h5>
+          <h5>Match 3 (foto zijn vlagen van de ploegen)</h5>
           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec nulla non metus.</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-genius"></span>
         <div class="services-content">
-          <h5>Branding</h5>
+          <h5>Match 4 (foto zijn vlagen van de ploegen)</h5>
           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec nulla non metus.</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-megaphone"></span>
         <div class="services-content">
-          <h5>Digital marketing</h5>
+          <h5>Match 5 (foto zijn vlagen van de ploegen)</h5>
           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec nulla non metus.</p>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-trophy"></span>
         <div class="services-content">
-          <h5>Promotion material</h5>
+          <h5>Match 6 (foto zijn vlagen van de ploegen)</h5>
           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec nulla non metus.</p>
         </div>
       </div>
