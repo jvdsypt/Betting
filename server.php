@@ -13,11 +13,16 @@ $dbhostname='brackemannen.be.mysql';
 $dbpassword='k74TVAhNhD4UK5EBpoLgHePn';
 $dbuser = 'brackemannen_be';  
 $dbname= 'brackemannen_be';
-$db = mysqli_connect($dbhostname, $dbuser, $dbpassword, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// real database query 
+// $db = mysqli_connect($dbhostname, $dbuser, $dbpassword, $dbname);
+
+// for local use
+$db = mysqli_connect('localhost', 'root', '', 'users');
+
+if ($db->connect_error) {
+    die("Connection failed: " . $db->connect_error);
 } 
-echo "Connected successfully";
+//echo "Connected successfully";
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -38,12 +43,12 @@ if (isset($_POST['reg_user'])) {
   // register user if there are no errors in the form
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
-  	$query = "INSERT INTO users (username, email, password) 
-  			  VALUES('$username', '$email', '$password')";
+  	$query = "INSERT INTO users (user_name, email, password, verification, payed) 
+  			  VALUES('$username', '$email', '$password', '0', false)";
   	mysqli_query($db, $query);
     $queryKlassement = "INSERT INTO klassement (username, matchenCorrect, winnaarCorrect, totaal) VALUES('$username', '0', '0', '0')";
-    mysqli_query($db, $queryKlassement);
-  	$_SESSION['username'] = $username;
+      mysqli_query($db, $queryKlassement);
+    	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
   	header('location: index.php');
   }

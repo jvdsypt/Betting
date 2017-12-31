@@ -199,11 +199,43 @@
   </div>
 </section>
 <!-- Matchen section --> 
+<?php include('server.php') ?>
+
 <!-- Klassement section -->
 <section id="Klassement" class="section teams">
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-sm-6">
+
+      <?php
+        $sqlklassement = "SELECT klassement.username, klassement.totaal, users.pic_path FROM klassement inner join users on klassement.username = users.user_name ORDER BY totaal DESC ";
+        $results = mysqli_query($db, $sqlklassement);
+        if (!$results) {
+            printf("Error: %s\n", mysqli_error($conn));
+            exit();
+          }
+        $loop = 1;
+        while($data = mysqli_fetch_array($results)){
+        echo '
+                    <div class="col-md-3 col-sm-6">
+                      <div class="person"><img src="images/'.$data['pic_path'].'" alt="" class="img-responsive">
+                        <div class="person-content">
+                          <h4>'.$data['username'].'</h4>
+                          <h5 class="role">'.$loop.'e plaats</h5>
+                          <p>'.$data['totaal'].' punten</p>
+                        </div>
+                        <ul class="social-icons clearfix">
+                          <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                          <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                          <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                          <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                          <li><a href="#"><span class="fa fa-dribbble"></span></a></li>
+                        </ul>
+                      </div>
+                    </div>';
+            $loop++;
+          }
+        ?>
+      <!-- <div class="col-md-3 col-sm-6">
         <div class="person"><img src="images/team-1.jpg" alt="" class="img-responsive">
           <div class="person-content">
             <h4>Player 1</h4>
@@ -273,7 +305,7 @@
       <center>
         <a href="klassement.php" class="btn btn-large">Volledige klassement</a>        
       </center>
-    </div>
+    </div> -->
   </div>
 </section>
 <!-- our Klassement section --> 

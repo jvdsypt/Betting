@@ -87,6 +87,7 @@ $dbname= 'brackemannen_be';
 <section id="fullKlassement" class="fullKlassement">
   <div class="container">
     <div class="col-md-8 col-md-offset-2 text-center">
+      <br>
       <table class="table table-bordered table-hover">
         <thead class="thead-inverse">
           <tr>  
@@ -98,28 +99,31 @@ $dbname= 'brackemannen_be';
           </tr>
         </thead>
         <tbody>
+        
           <?php
-              define('MYSQL_ASSOC',MYSQLI_ASSOC);
-              $conn = new mysqli($dbhostname, $dbuser, $dbpassword, $dbname);
+              // define('MYSQL_ASSOC',MYSQLI_ASSOC);
+              //$conn = new mysqli($dbhostname, $dbuser, $dbpassword, $dbname);
+              $conn = new mysqli('localhost', 'root', '', 'users');
               if (mysqli_connect_errno())
                 {
                 echo "Failed to connect to MySQL: " . mysqli_connect_error();
                 }
-              $sql = "SELECT * FROM klassement ORDER BY totaal";
+             $sql = "SELECT * FROM klassement ORDER BY totaal DESC";
              $result = mysqli_query($conn, $sql);
                if (!$result) {
                   printf("Error: %s\n", mysqli_error($conn));
                   exit();
               }
+              $ranking = 1;
               while($data = mysqli_fetch_array($result)){
-                $ranking = 1;
+                
                 echo'
                     <tr>
-                        <td>1</td>
+                        <td>'.$ranking.'</td>
                         <td>'.$data['username'].'</td>
                         <td>'.$data['matchenCorrect'].'</td>
                         <td>'.$data['winnaarCorrect'].'</td>
-                        <td>'.$data['totaal'].'</td>
+                        <td><b>'.$data['totaal'].'</b></td>
                     </tr>
                 ';
                 $ranking++;
