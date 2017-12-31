@@ -7,8 +7,10 @@ $email    = "";
 $errors = array(); 
 $_SESSION['success'] = "";
 
-// connect to database
+// connect to database 
+// opbouw: mysqli_connect('hostname', 'gebruikersnaam', 'password', 'database');
 $db = mysqli_connect('localhost', 'root', '', 'users');
+
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -32,6 +34,8 @@ if (isset($_POST['reg_user'])) {
   	$query = "INSERT INTO users (username, email, password) 
   			  VALUES('$username', '$email', '$password')";
   	mysqli_query($db, $query);
+    $queryKlassement = "INSERT INTO klassement (username, matchenCorrect, winnaarCorrect, totaal) VALUES('$username', '0', '0', '0')";
+    mysqli_query($db, $queryKlassement);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
   	header('location: index.php');

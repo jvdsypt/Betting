@@ -81,79 +81,44 @@
 <section id="fullKlassement" class="fullKlassement">
   <div class="container">
     <div class="col-md-8 col-md-offset-2 text-center">
-      <table class="table table-bordered">
+      <table class="table table-bordered table-hover">
         <thead class="thead-inverse">
-          <tr>
-            <th>#</th>
-            <th>Speler</th>
-            <th>volledig correct</th>
-            <th>juiste winnaar</th>
-            <th><b>Totaal</b></th>
+          <tr>  
+            <td>#</td>
+            <td>Speler</td>
+            <td>Uitslag Correct</td>
+            <td>Winnaars Correct</td>
+            <td><b>Totaal</b></td>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Player 1</td>
-            <td>x</td>
-            <td>y</td>
-            <td><b>z</b></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Player 1</td>
-            <td>x</td>
-            <td>y</td>
-            <td><b>z</b></td>
-          </tr><tr>
-            <th scope="row">3</th>
-            <td>Player 1</td>
-            <td>x</td>
-            <td>y</td>
-            <td><b>z</b></td>
-          </tr><tr>
-            <th scope="row">4</th>
-            <td>Player 1</td>
-            <td>x</td>
-            <td>y</td>
-            <td><b>z</b></td>
-          </tr><tr>
-            <th scope="row">5</th>
-            <td>Player 1</td>
-            <td>x</td>
-            <td>y</td>
-            <td><b>z</b></td>
-          </tr><tr>
-            <th scope="row">6</th>
-            <td>Player 1</td>
-            <td>x</td>
-            <td>y</td>
-            <td><b>z</b></td>
-          </tr><tr>
-            <th scope="row">7</th>
-            <td>Player 1</td>
-            <td>x</td>
-            <td>y</td>
-            <td><b>z</b></td>
-          </tr><tr>
-            <th scope="row">8</th>
-            <td>Player 1</td>
-            <td>x</td>
-            <td>y</td>
-            <td><b>z</b></td>
-          </tr><tr>
-            <th scope="row">9</th>
-            <td>Player 1</td>
-            <td>x</td>
-            <td>y</td>
-            <td><b>z</b></td>
-          </tr><tr>
-            <th scope="row">10</th>
-            <td>Player 1</td>
-            <td>x</td>
-            <td>y</td>
-            <td><b>z</b></td>
-          </tr>
+          <?php
+              define('MYSQL_ASSOC',MYSQLI_ASSOC);
+              $conn = new mysqli('localhost','root','','users');
+              if (mysqli_connect_errno())
+                {
+                echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                }
+              $sql = "SELECT * FROM klassement ORDER BY totaal";
+             $result = mysqli_query($conn, $sql);
+               if (!$result) {
+                  printf("Error: %s\n", mysqli_error($conn));
+                  exit();
+              }
+              while($data = mysqli_fetch_array($result)){
+                $ranking = 1;
+                echo'
+                    <tr>
+                        <td>1</td>
+                        <td>'.$data['username'].'</td>
+                        <td>'.$data['matchenCorrect'].'</td>
+                        <td>'.$data['winnaarCorrect'].'</td>
+                        <td>'.$data['totaal'].'</td>
+                    </tr>
+                ';
+                $ranking++;
+              }
+          ?>
         </tbody>
       </table>
     </div>

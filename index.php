@@ -39,7 +39,7 @@
 <!-- header section -->
 <section class="banner" role="banner">
   <header id="header">
-    <div class="header-content clearfix"> <a class="logo" href="index.html">WK 2018 Betting</a>
+    <div class="header-content clearfix"> <a class="logo" href="index.php">WK 2018 Betting</a>
       <nav class="navigation" role="navigation">
         <ul class="primary-nav">
           <li><a href="#Uitleg">Uitleg</a></li>
@@ -206,9 +206,9 @@
       <div class="col-md-3 col-sm-6">
         <div class="person"><img src="images/team-1.jpg" alt="" class="img-responsive">
           <div class="person-content">
-            <h4>Lisa Brown</h4>
-            <h5 class="role">The Mastermind</h5>
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
+            <h4>Player 1</h4>
+            <h5 class="role">1ste plaats</h5>
+            <p>totaal aantal punten </p>
           </div>
           <ul class="social-icons clearfix">
             <li><a href="#"><span class="fa fa-facebook"></span></a></li>
@@ -222,9 +222,9 @@
       <div class="col-md-3 col-sm-6">
         <div class="person"> <img src="images/team-2.jpg" alt="" class="img-responsive">
           <div class="person-content">
-            <h4>Johnathan Deo</h4>
-            <h5 class="role">Creative head</h5>
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <h4>Player 2</h4>
+            <h5 class="role">2de plaats</h5>
+            <p>Totaal aantal punten</p>
           </div>
           <ul class="social-icons clearfix">
             <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
@@ -238,9 +238,9 @@
       <div class="col-md-3 col-sm-6">
         <div class="person"> <img src="images/team-3.jpg" alt="" class="img-responsive">
           <div class="person-content">
-            <h4>Mike collins</h4>
-            <h5 class="role">Technical lead</h5>
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <h4>Player 3</h4>
+            <h5 class="role">3de plaats</h5>
+            <p>Totaal aantal punten</p>
           </div>
           <ul class="social-icons clearfix">
             <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
@@ -254,9 +254,9 @@
       <div class="col-md-3 col-sm-6">
         <div class="person"> <img src="images/team-4.jpg" alt="" class="img-responsive">
           <div class="person-content">
-            <h4>Rita Rose</h4>
-            <h5 class="role">Marketing head</h5>
-            <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <h4>Player 4</h4>
+            <h5 class="role">4de plaats</h5>
+            <p>totaal aantal punten</p>
           </div>
           <ul class="social-icons clearfix">
             <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
@@ -267,6 +267,12 @@
           </ul>
         </div>
       </div>
+    </div>
+    <br>
+    <div class='row'>
+      <center>
+        <a href="klassement.php" class="btn btn-large">Volledige klassement</a>        
+      </center>
     </div>
   </div>
 </section>
@@ -281,6 +287,7 @@
           <li>
             <div class="col-md-12">
               <blockquote>
+                <!-- cards = hidden zou normaal foto moeten negeren maar werkt niet -->
                 <a class="twitter-timeline"
                   href="https://twitter.com/GaryLineker"
                   data-tweet-limit="1"
