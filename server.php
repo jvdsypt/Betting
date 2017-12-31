@@ -9,8 +9,15 @@ $_SESSION['success'] = "";
 
 // connect to database 
 // opbouw: mysqli_connect('hostname', 'gebruikersnaam', 'password', 'database');
-$db = mysqli_connect('localhost', 'root', '', 'users');
-
+$dbhostname='brackemannen.be.mysql';
+$dbpassword='k74TVAhNhD4UK5EBpoLgHePn';
+$dbuser = 'brackemannen_be';  
+$dbname= 'brackemannen_be';
+$db = mysqli_connect($dbhostname, $dbuser, $dbpassword, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {

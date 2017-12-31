@@ -10,7 +10,13 @@
     unset($_SESSION['username']);
     header("location: login.php");
   }
+
+$dbhostname='brackemannen.be.mysql';
+$dbpassword='k74TVAhNhD4UK5EBpoLgHePn';
+$dbuser = 'brackemannen_be';  
+$dbname= 'brackemannen_be';
 ?>
+
 
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -94,7 +100,7 @@
         <tbody>
           <?php
               define('MYSQL_ASSOC',MYSQLI_ASSOC);
-              $conn = new mysqli('localhost','root','','users');
+              $conn = new mysqli($dbhostname, $dbuser, $dbpassword, $dbname);
               if (mysqli_connect_errno())
                 {
                 echo "Failed to connect to MySQL: " . mysqli_connect_error();
