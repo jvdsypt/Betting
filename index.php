@@ -207,7 +207,7 @@
     <div class="row">
 
       <?php
-        $sqlklassement = "SELECT klassement.username, klassement.totaal, users.pic_path FROM klassement inner join users on klassement.username = users.user_name ORDER BY totaal DESC ";
+        $sqlklassement = "SELECT klassement.username, klassement.totaal, users.pic_path FROM klassement inner join users on klassement.username = users.user_name ORDER BY totaal DESC LIMIT 4";
         $results = mysqli_query($db, $sqlklassement);
         if (!$results) {
             printf("Error: %s\n", mysqli_error($conn));
@@ -299,13 +299,13 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
     <br>
     <div class='row'>
       <center>
         <a href="klassement.php" class="btn btn-large">Volledige klassement</a>        
       </center>
-    </div> -->
+    </div>
   </div>
 </section>
 <!-- our Klassement section --> 
