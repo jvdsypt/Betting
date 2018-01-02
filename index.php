@@ -323,7 +323,9 @@
                 <a class="twitter-timeline"
                   href="https://twitter.com/GaryLineker"
                   data-tweet-limit="1"
-                  cards = hidden>
+                  data-cards="hidden" 
+				  hide_media=true
+				  data-src="false">
                   </a>
                 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                 <p>Latest tweet by @GaryLineker</p>
@@ -342,8 +344,15 @@
           <li>
             <div class="col-md-12">
               <blockquote>
-                <h1>"Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur...." </h1>
-                <p>Andi Simond, Global Corporate Inc</p>
+                <a class="twitter-timeline"
+                  href="https://twitter.com/BelRedDevils"
+                  data-tweet-limit="1"
+                  data-cards="hidden" 
+				  hide_media=true
+				  data-src="false">
+                  </a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                <p>Latest tweet by @BelRedDevils</p>
               </blockquote>
             </div>
           </li>
