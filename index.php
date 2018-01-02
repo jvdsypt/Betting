@@ -301,6 +301,7 @@
       </div>
     </div> -->
     <br>
+    <br>
     <div class='row'>
       <center>
         <a href="klassement.php" class="btn btn-large">Volledige klassement</a>        

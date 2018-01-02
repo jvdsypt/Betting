@@ -1,11 +1,13 @@
 <?php
 session_start();
 
+
 // variable declaration
 $username = "";
 $email    = "";
 $errors = array(); 
 $_SESSION['success'] = "";
+$_SESSION['facebook'] = "";
 
 // connect to database 
 // opbouw: mysqli_connect('hostname', 'gebruikersnaam', 'password', 'database');
